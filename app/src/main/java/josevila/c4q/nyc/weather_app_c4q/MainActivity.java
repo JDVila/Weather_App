@@ -1,7 +1,6 @@
 package josevila.c4q.nyc.weather_app_c4q;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,15 +23,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class MainActivity extends AppCompatActivity {
 
     private static final String BASE_URL = "https://api.aerisapi.com/";
-    //private static final String API_KEY = BuildConfig.API_KEY;
     private static final String CLIENT_ID = "QegbanSYW0jiHQ3qttYAl";
     private static final String CLIENT_SECRET = "8VMxIq0oCrIbVA4ZsJmsgq5NEOhiHrqH8URC07bK";
     private String TAG = "Did you connect? ";
     private boolean mIsSuccessful;
     private List<Period> weatherList = new ArrayList<>();
     private RecyclerView weatherRecyclerView;
-    private Handler handler;
-    private Runnable runnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
