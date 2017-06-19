@@ -23,8 +23,8 @@ public class WeatherViewHolder extends RecyclerView.ViewHolder{
 
     public void onBind(Period period) {
         date.setText(period.dateTimeISO);
-
         highTemp.setText("High: " + period.maxTempC + " deg C");
         lowTemp.setText("Low: " + period.minTempC + " deg C");
+        final Period nuPeriod = period;
     }
 }
