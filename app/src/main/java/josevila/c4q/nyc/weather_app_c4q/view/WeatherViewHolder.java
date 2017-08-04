@@ -27,6 +27,8 @@ public class WeatherViewHolder extends RecyclerView.ViewHolder {
                 pictureMap.put(fields[count].getName(), fields[count].getInt(fields[count]));
             } catch (IllegalAccessException e) {
                 e.printStackTrace();
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
             }
         }
         date = (TextView) itemView.findViewById(R.id.date_textview);
